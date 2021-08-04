@@ -20,11 +20,11 @@ class Ui_MainWindow(object):
         self.label.setStyleSheet("color: rgb(193, 185, 209);")
         self.label.setObjectName("label")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 120, 498, 117))
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 100, 511, 78))
         self.layoutWidget.setObjectName("layoutWidget")
-        self.formLayout_3 = QtWidgets.QFormLayout(self.layoutWidget)
-        self.formLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.formLayout_3.setObjectName("formLayout_3")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.formLayout_2 = QtWidgets.QFormLayout()
         self.formLayout_2.setObjectName("formLayout_2")
         self.formLayout = QtWidgets.QFormLayout()
@@ -47,13 +47,6 @@ class Ui_MainWindow(object):
             0, QtWidgets.QFormLayout.FieldRole, self.comboBox)
         self.formLayout_2.setLayout(
             0, QtWidgets.QFormLayout.SpanningRole, self.formLayout)
-        self.label_3 = QtWidgets.QLabel(self.layoutWidget)
-        self.label_3.setStyleSheet("color: rgb(193, 185, 209);\n"
-                                   "font: 75 14pt \"Verdana\";\n"
-                                   "padding: 5px;")
-        self.label_3.setObjectName("label_3")
-        self.formLayout_2.setWidget(
-            1, QtWidgets.QFormLayout.LabelRole, self.label_3)
         self.comboBox_2 = QtWidgets.QComboBox(self.layoutWidget)
         self.comboBox_2.setStyleSheet("color: rgb(193, 185, 209);\n"
                                       "font: 75 12pt \"Verdana\";\n"
@@ -67,15 +60,14 @@ class Ui_MainWindow(object):
         self.comboBox_2.addItem("")
         self.formLayout_2.setWidget(
             1, QtWidgets.QFormLayout.FieldRole, self.comboBox_2)
-        self.formLayout_3.setLayout(
-            0, QtWidgets.QFormLayout.SpanningRole, self.formLayout_2)
-        self.label_5 = QtWidgets.QLabel(self.layoutWidget)
-        self.label_5.setStyleSheet("color: rgb(193, 185, 209);\n"
-                                   "font: 75 10pt \"Verdana\";\n"
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget)
+        self.label_3.setStyleSheet("color: rgb(193, 185, 209);\n"
+                                   "font: 75 14pt \"Verdana\";\n"
                                    "padding: 5px;")
-        self.label_5.setObjectName("label_5")
-        self.formLayout_3.setWidget(
-            1, QtWidgets.QFormLayout.FieldRole, self.label_5)
+        self.label_3.setObjectName("label_3")
+        self.formLayout_2.setWidget(
+            1, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.verticalLayout.addLayout(self.formLayout_2)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(430, 310, 91, 31))
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -85,13 +77,13 @@ class Ui_MainWindow(object):
                                       "padding: 5px;")
         self.pushButton.setObjectName("pushButton")
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(28, 310, 281, 31))
+        self.checkBox.setGeometry(QtCore.QRect(29, 310, 281, 31))
         self.checkBox.setStyleSheet("color: rgb(193, 185, 209);\n"
                                     "font: 75 12pt \"Verdana\";\n"
                                     "padding: 5px;")
         self.checkBox.setObjectName("checkBox")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(32, 250, 191, 31))
+        self.pushButton_2.setGeometry(QtCore.QRect(33, 260, 191, 31))
         self.pushButton_2.setCursor(
             QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_2.setStyleSheet("color: rgb(243, 243, 243);\n"
@@ -99,6 +91,12 @@ class Ui_MainWindow(object):
                                         "font: 75 14pt \"Verdana\";\n"
                                         "padding: 5px;")
         self.pushButton_2.setObjectName("pushButton_2")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(24, 190, 501, 51))
+        self.label_5.setStyleSheet("color: rgb(193, 185, 209);\n"
+                                   "font: 75 10pt \"Verdana\";\n"
+                                   "padding: 5px;")
+        self.label_5.setObjectName("label_5")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 542, 21))
@@ -118,15 +116,15 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Category:"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Category name"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Category name"))
-        self.label_3.setText(_translate("MainWindow", "Update frequency:"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "One day"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Two days"))
         self.comboBox_2.setItemText(2, _translate("MainWindow", "Three days"))
         self.comboBox_2.setItemText(3, _translate("MainWindow", "Week"))
         self.comboBox_2.setItemText(4, _translate("MainWindow", "Month"))
         self.comboBox_2.setItemText(5, _translate("MainWindow", "Never"))
-        self.label_5.setText(_translate("MainWindow", ""))
+        self.label_3.setText(_translate("MainWindow", "Update frequency:"))
         self.pushButton.setText(_translate("MainWindow", "Save"))
         self.checkBox.setText(_translate(
             "MainWindow", "Don\'t delete current wallpaper"))
         self.pushButton_2.setText(_translate("MainWindow", "Update wallpaper"))
+        self.label_5.setText(_translate("MainWindow", ""))
