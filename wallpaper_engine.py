@@ -70,6 +70,9 @@ class WallpaperEngine:
         response = requests.get(url)
         filename = os.path.basename(url)
         full_path = os.path.join(upload_to, filename)
+        
+        if not os.path.exists(upload_to):
+            os.mkdir(upload_to)
 
         with open(full_path, 'wb') as file:
             file.write(response.content)
