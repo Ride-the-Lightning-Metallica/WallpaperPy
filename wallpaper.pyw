@@ -54,7 +54,7 @@ class Wallpaper(QtWidgets.QMainWindow):
             'url': self.wallpaper_categories[category_name]
         }
         update_frequency = self.ui.comboBox_2.currentText()
-        current_wallpaper = self.ui.label_5.text()
+        current_wallpaper = self.ui.label_5.text().replace('\n', '')
         save_current_wallpaper = self.ui.checkBox.isChecked()
 
         settings = {
